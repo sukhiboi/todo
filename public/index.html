@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="./css/login.css" type="text/css" rel="stylesheet" />
+    <link rel='shortcut icon' href='./images/favicon.ico' type='image/x-icon' />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="login-box center" id='loginBox'>
+      <div class="title">
+        <span>Login</span>
+      </div>
+      <span id="loginErrMsg">&nbsp;</span>
+      <div class="loginInputs">
+        <input placeholder="Username" id="loginuserName" autofocus /><br />
+        <input type="password" placeholder="Password" id="loginpassword" onkeydown="loginValidator(true)"/>
+      </div>
+      <div class="buttons" >
+        <button class="button hoverable" onclick="loginValidator()">Login</button class="button">
+            <span class="signup"><br>Not a registered user? <span class="hoverable label" id="singupLink" onclick="hide('loginBox'), show('signupBox')">Signup</span></span>
+      </div>
+    </div>
+
+    <div class="login-box center hide" id='signupBox'>
+      <div class="title">
+        <span>Signup</span>
+      </div>
+      <span id="signupErrMsg">&nbsp;</span>
+      <div class="loginInputs">
+        <input placeholder="Username" id="signupuserName" autofocus /><br />
+        <input type="password" placeholder="Password" id="signuppassword" onkeydown="signup(true)"/>
+      </div>
+      <div class="buttons">
+        <button class="button hoverable" onclick="signup()">Signup</button class="button">
+            <span class="signup"><br>Already have an account? <span class="hoverable label" id="loginLink" onclick="hide('signupBox'), show('loginBox')">Login</span></span>
+      </div>
+    </div>
+  </body>
+  <script src="js/login.js"></script>
+</html>

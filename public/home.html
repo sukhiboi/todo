@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/main.css" type="text/css" />
+    <link rel='shortcut icon' href='./images/favicon.ico' type='image/x-icon' />
+    <title>Todo</title>
+  </head>
+  <body onload="loadTodos()">
+    <div class="header flex">
+      <div class="app-name"><span>Todo</span></div>
+      <div class="options flex">
+        <div class="logout hoverable" onclick="logout()">Logout</div>
+        <div class="search-bar flex">
+          <input
+            placeholder="Search Todos..."
+            oninput="filter(this.value, 'todo-heading')"
+          />
+          <img class="hoverable" src="./images/search.svg" />
+        </div>
+        <div class="search-bar flex">
+          <input
+            placeholder="Search Tasks..."
+            oninput="filter(this.value, 'task-tile')"
+          />
+          <img class="hoverable" src="./images/search.svg" />
+        </div>
+        <div class="new-list hoverable" onclick="toggleNewListBox()">
+          New Todo
+        </div>
+      </div>
+    </div>
+    <div class="window flex" id="window"></div>
+
+    <div class="popup hide" id="newListPopup">
+      <div class="msgBox center">
+        <span>Create New Todo</span><br />
+        <input
+          placeholder="Your new list name..."
+          id="newTodoTitle"
+          onkeydown="createTodo(true)"
+        /><br />
+        <button class="logout hoverable" onclick="createTodo()">
+          Create
+        </button>
+        <button class="logout cancel hoverable" onclick="toggleNewListBox()">
+          Cancel
+        </button>
+      </div>
+    </div>
+
+    <div class="popup hide" id="deleteTodoPopup">
+      <div class="msgBox center">
+        <span>Are you sure you want to delete this todo?</span><br />
+        <button class="logout cancel hoverable" id="deleteBtn">
+          DELETE
+        </button>
+        <button class="logout hoverable" onclick="toggleTodoDeleteBox()">
+          Cancel
+        </button>
+      </div>
+    </div>
+  </body>
+  <script src="./js/home.js"></script>
+  <script src="./js/todoGenerator.js"></script>
+  <script src="./js/taskGenerator.js"></script>
+</html>

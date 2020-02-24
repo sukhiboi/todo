@@ -1,0 +1,139 @@
+%UI
+ ✔︎index.html which give option to create new tasklist and show all todolist
+ ✔︎<todoPageName>.html
+  -> will give the platform to ✔︎ add ✔︎ show delete each task in that tasklist
+%Test
+ ✔︎ test getRequest for static page
+ ✔︎ test Task class
+ ✔︎ test TaskList class
+ ✔︎ test ToDo class
+ ✔︎ test ToDoList class
+ ✔︎ test todolist.has a listid
+ ✔︎ test todo.toHTML
+ ✔︎ test todoList.toHTML of given todo
+ ✔︎ test task toJSON
+ * test postRequest
+%JS
+ ✔︎ todo class which create and manage each todo
+ ✔︎ todoList class which create and manage list of todo 
+ ✔︎ task class which create and manage each task
+ ✔︎ taskList class which create and manage list of task
+ ✔︎ add todolist.has a listid
+ ✔︎ add todo.toHTML
+ ✔︎ add todoList.toHTML of given todo
+
+  ✔︎ convert add task from form post to xmlHTTPRequest
+  ✔︎ convert add todo from form post to xmlHTTPRequest
+  ✔︎ remove functions and files which is used to deliver separate todo page
+  ✔︎ remove toHTML from all class
+  ✔︎ remove test for toHTML in all class
+  ✔︎ remove input text value after clicking add
+  ✔︎ use time to create id
+  ✔︎ change new file button to a plus icon
+  * add npmtest, npmStart, add config (important)
+  
+  
+  ✔︎ view all todo in the page
+  ✔︎ restyle the index.html
+
+  ✔︎ bug fix: refreshing sending xmlHTTPRequest resubmitting last data
+  ✔︎ bug fix: hide not applicaple divs
+  ✔︎ remove inside text when click to close add todo window
+
+  ✔︎ task status change, task edit, task delete, save editted task
+  ✔︎ todo title edit, todo delete
+
+  * add search bar 
+  * add separate search in todoTitle and task
+  * show filtered list
+  * highlight matching text
+
+  * todo edit will open pop up window where you can edit todo in bigger window (less priority)
+  * pull out a todoAppHandler which will take care of everything in the app, you just provide path to it and initialize,
+    - it will read write and do things in order
+  * login class which create and handle user
+
+  * design login page which will be the index page
+  * check wether you have cookies if its present then validate then only go to to do page of perticular person
+
+
+---------------
+
+✔︎ Move app.js and handlers.js to library directory.
+✔︎ install sinon, nyc, mocha
+✔︎ config file (it will contain data store path)
+* add querystring (change the conversation method of server and client,  client will send in url encoding)
+✔︎ create MIME.js 
+✗ make components (plan droped)
+* write tests
+* use delete and patch methodd(update,app.JS)
+* export classes ( in their own files)
+* add save and load methods to app(todoList)class
+* remove tasklist class
+* send the function reference of app.server from handlers.js
+* don't render body again and again
+* install eslint
+-----
+
+* middleware for validation
+
+-------
+
+✔︎ rename TodoList to Todo store
+✔︎ new Todo store will take path of data store.
+✔︎ TodoStore will have a initialize method which read from the file and load.
+✔︎ Delete static load method of Todo Store.
+
+✔︎ Rename App class to Router.
+✔︎ Create TodoApp class which takes TodoStore instance. 
+✔︎ It will have an initialize method to initilize ToDoStore.
+✔︎ It has a serve method which take (req, res) and handle request, it will serve the response.
+
+✔︎ Delete TaskList, move the method logic to Todo class.
+✔︎ export classes ( in their own files)
+✔︎ Rename variables names 
+- make every method return. 
+- Change the tests
+
+--------
+
+- If file is not present create JSON file
+- Add JSON file in git ignore
+- Update npm start to crete directory.
+- FIXBUG: search in Todo tile, currently working after 3 characters
+- Rephrase test description (refer todoStore -> editTaskStatus description)
+- Change variable names
+- Refactor public/index.js
+
+----------------
+✔︎ install express
+✔︎ add express instead of http server
+✔︎ removed store from class
+✔︎  moved initialization of handlers to server.js
+✔︎ use app.locals available in express instead of binding
+✔︎ make handlers indipendent of class
+--------------------------
+------Login------
+✔︎ hard coded single user credentials
+✔︎ dataStore will available for that single user.
+✔︎ valid user redirect to home.html and invalid user will go to index.html
+✔︎ client side validation just checks any data present in the text box
+✔︎ when login credentials doesn't match show message inside login box
+✔︎ It should show message when user tried to submit empty form.
+✔︎ set cookies when user login in the app.
+✗ home.html will be a template
+✔︎ only authorised users will get home.html otherwise redirect to login page(later:add message to please login first)
+✔︎ authenticateUser will be a middleware which check for user before handling any request apart from static pages.
+
+----
+* user class userName, password and id are properties, matchPassword, matchUserName matchUserInfo(username, password)
+* userList class has array of user, hasUser, (later: addUser,removeUser)
+
+----------------------------------
+----signUp------
+* design signUp page
+* user and users class
+* change data structure
+ - add outer array which has user object which has userName, password, id
+ - responsibility of keeping sessionId, validating user isLogged In or not and giving home page is given to userHandler
+* Improve UI
