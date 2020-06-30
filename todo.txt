@@ -31,8 +31,7 @@
   ✔︎ use time to create id
   ✔︎ change new file button to a plus icon
   * add npmtest, npmStart, add config (important)
-  
-  
+ 
   ✔︎ view all todo in the page
   ✔︎ restyle the index.html
 
