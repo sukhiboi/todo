@@ -112,7 +112,8 @@
 ✔︎  moved initialization of handlers to server.js
 ✔︎ use app.locals available in express instead of binding
 ✔︎ make handlers indipendent of class
---------------------------
+
+
 ------Login------
 ✔︎ hard coded single user credentials
 ✔︎ dataStore will available for that single user.
