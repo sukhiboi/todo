@@ -2,6 +2,7 @@
  ✔︎index.html which give option to create new tasklist and show all todolist
  ✔︎<todoPageName>.html
   -> will give the platform to ✔︎ add ✔︎ show delete each task in that tasklist
+  
 %Test
  ✔︎ test getRequest for static page
  ✔︎ test Task class
