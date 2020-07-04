@@ -130,7 +130,6 @@
 * user class userName, password and id are properties, matchPassword, matchUserName matchUserInfo(username, password)
 * userList class has array of user, hasUser, (later: addUser,removeUser)
 
-----------------------------------
 ----signUp------
 * design signUp page
 * user and users class
